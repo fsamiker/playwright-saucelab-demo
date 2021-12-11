@@ -18,7 +18,7 @@ export class ProductsPage {
     }
 
     async goto() {
-        await this.page.goto('https://www.saucedemo.com/inventory.html');
+        await this.page.goto('/inventory.html');
     }
 
     async clickCart() {
