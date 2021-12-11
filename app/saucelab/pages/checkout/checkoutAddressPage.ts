@@ -1,6 +1,7 @@
 import { Locator, Page } from '@playwright/test';
+import { SaucelabBasePage } from '../utils/basePage';
 
-export class CheckoutAddrPage {
+export class CheckoutAddrPage extends SaucelabBasePage {
     readonly page: Page;
     readonly firstNameTextbox: Locator;
     readonly lastNameTextbox: Locator;
@@ -9,7 +10,7 @@ export class CheckoutAddrPage {
 
 
     constructor(page: Page) {
-        this.page = page;
+        super(page);
         this.firstNameTextbox = page.locator('input#first-name');
         this.lastNameTextbox = page.locator('input#last-name');
         this.postcodeTextbox = page.locator('input#postal-code');

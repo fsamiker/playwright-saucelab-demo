@@ -1,13 +1,14 @@
 import { Locator, Page } from '@playwright/test';
+import { SaucelabBasePage } from './utils/basePage';
 
-export class CartPage {
+export class CartPage extends SaucelabBasePage {
     readonly page: Page;
     readonly cartItemsList: Locator;
     readonly checkoutButton: Locator;
 
 
     constructor(page: Page) {
-        this.page = page;
+        super(page);
         this.cartItemsList = page.locator('div.cart_list >> div.cart_item');
         this.checkoutButton = page.locator('button#checkout');
     }

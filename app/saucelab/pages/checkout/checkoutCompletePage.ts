@@ -1,6 +1,7 @@
 import { Locator, Page } from '@playwright/test';
+import { SaucelabBasePage } from '../utils/basePage';
 
-export class CheckoutCompletePage {
+export class CheckoutCompletePage extends SaucelabBasePage {
     readonly page: Page;
     readonly completeTitle: Locator;
     readonly completeMessage: Locator;
@@ -8,7 +9,7 @@ export class CheckoutCompletePage {
 
 
     constructor(page: Page) {
-        this.page = page;
+        super(page);
         this.completeTitle = page.locator('div.complete-header');
         this.completeMessage = page.locator('div.complete-text');
         this.backHomeButton = page.locator('button#back-to-products');
