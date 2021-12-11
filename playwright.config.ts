@@ -5,6 +5,7 @@ import 'dotenv/config';
 const config: PlaywrightTestConfig = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
+  globalTimeout: 10 * 60 * 1000, // saucelab login expires in 10 mins
   globalSetup: require.resolve('./tests/global-setup'),
   reporter: [['html', {open: 'never'}]],
   expect: {
