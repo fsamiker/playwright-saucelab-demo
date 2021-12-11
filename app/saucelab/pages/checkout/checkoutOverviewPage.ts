@@ -2,7 +2,6 @@ import { Locator, Page } from '@playwright/test';
 import { SaucelabBasePage } from '../utils/basePage';
 
 export class CheckoutOverviewPage extends SaucelabBasePage {
-    readonly page: Page;
     readonly cartItemsList: Locator;
     readonly finishButton: Locator;
     readonly cartTotalSummary: Locator;
