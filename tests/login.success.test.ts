@@ -1,4 +1,3 @@
-// example.spec.ts
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../app/saucelab/pages/loginPage';
 

@@ -44,6 +44,7 @@ Run test by tag
 npx playwright test --grep @flow
 npx playwright test --grep @feature
 npx playwright test --grep @auth
+npx playwright test --grep @snapshot
 ```
 
 Run test by file
